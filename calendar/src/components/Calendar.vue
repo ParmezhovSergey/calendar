@@ -57,7 +57,7 @@ const forceKey = ref(0);
 // Названия дней недели
 const weekDays = computed(() => {
   const dt = DateTime.now().setLocale(currentLocale.value);
-  return ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map((day, index) =>
+  return ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map((day, index:any) =>
     dt.set({ weekday: index + 1 }).toFormat("EEE")
   );
 });
